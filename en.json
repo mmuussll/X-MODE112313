@@ -1,0 +1,62 @@
+{
+  "zenith": "Zenith",
+  "pomodoro": "Pomodoro",
+  "todoList": "To-Do List",
+  "habitTracker": "Habit Tracker",
+  "notebook": "Notebook",
+  "copyright": "© 2024 Zenith Focus",
+  "pomodoroTimer": {
+    "work": "Work",
+    "shortBreak": "Short Break",
+    "longBreak": "Long Break",
+    "start": "Start",
+    "pause": "Pause",
+    "reset": "Reset",
+    "completedToday": "Completed Pomodoros today: {count}",
+    "monthlySessions": "Monthly Pomodoro Sessions",
+    "sessions": "Sessions",
+    "notificationBreak": "Time for a break!",
+    "notificationWork": "Time to get back to work!"
+  },
+  "todo": {
+    "title": "To-Do List",
+    "newTask": "New Task",
+    "editTask": "Edit Task",
+    "taskTitle": "Title",
+    "description": "Description",
+    "priority": "Priority",
+    "status": "Status",
+    "cancel": "Cancel",
+    "saveTask": "Save Task",
+    "priorities": {
+      "High": "High",
+      "Medium": "Medium",
+      "Low": "Low"
+    },
+    "statuses": {
+      "ToDo": "To Do",
+      "InProgress": "In Progress",
+      "Done": "Done"
+    }
+  },
+  "habit": {
+    "yourHabits": "Your Habits",
+    "addHabitPlaceholder": "Add a new habit...",
+    "completions": "{count} completions",
+    "currentStreak": "Current Streak",
+    "thisMonth": "This Month",
+    "totalCompletions": "Total Completions",
+    "doneToday": "Done Today?",
+    "monthlyProgress": "Monthly Progress",
+    "selectHabit": "Select a habit or add a new one to see details."
+  },
+  "notes": {
+    "title": "Notes",
+    "searchPlaceholder": "Search notes...",
+    "newNote": "New Note",
+    "untitledNote": "Untitled Note",
+    "lastUpdated": "Last updated: {date}",
+    "editorPlaceholder": "Start writing your note here. Use # for title...",
+    "selectNote": "Select a note or create a new one."
+  }
+}

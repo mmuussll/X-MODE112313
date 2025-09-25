@@ -1,0 +1,62 @@
+{
+  "zenith": "زينث",
+  "pomodoro": "بومودورو",
+  "todoList": "قائمة المهام",
+  "habitTracker": "متتبع العادات",
+  "notebook": "دفتر الملاحظات",
+  "copyright": "© 2024 زينث فوكس",
+  "pomodoroTimer": {
+    "work": "عمل",
+    "shortBreak": "استراحة قصيرة",
+    "longBreak": "استراحة طويلة",
+    "start": "ابدأ",
+    "pause": "إيقاف مؤقت",
+    "reset": "إعادة ضبط",
+    "completedToday": "جلسات بومودورو المكتملة اليوم: {count}",
+    "monthlySessions": "جلسات بومودورو الشهرية",
+    "sessions": "جلسات",
+    "notificationBreak": "حان وقت الاستراحة!",
+    "notificationWork": "حان وقت العودة إلى العمل!"
+  },
+  "todo": {
+    "title": "قائمة المهام",
+    "newTask": "مهمة جديدة",
+    "editTask": "تعديل المهمة",
+    "taskTitle": "العنوان",
+    "description": "الوصف",
+    "priority": "الأولوية",
+    "status": "الحالة",
+    "cancel": "إلغاء",
+    "saveTask": "حفظ المهمة",
+    "priorities": {
+      "High": "عالية",
+      "Medium": "متوسطة",
+      "Low": "منخفضة"
+    },
+    "statuses": {
+      "ToDo": "مهام مطلوبة",
+      "InProgress": "قيد التنفيذ",
+      "Done": "مكتملة"
+    }
+  },
+  "habit": {
+    "yourHabits": "عاداتك",
+    "addHabitPlaceholder": "أضف عادة جديدة...",
+    "completions": "{count} إكمال",
+    "currentStreak": "سلسلة حالية",
+    "thisMonth": "هذا الشهر",
+    "totalCompletions": "إجمالي الإكمالات",
+    "doneToday": "هل أنجزت اليوم؟",
+    "monthlyProgress": "التقدم الشهري",
+    "selectHabit": "اختر عادة أو أضف واحدة جديدة لرؤية التفاصيل."
+  },
+  "notes": {
+    "title": "الملاحظات",
+    "searchPlaceholder": "ابحث في الملاحظات...",
+    "newNote": "ملاحظة جديدة",
+    "untitledNote": "ملاحظة بدون عنوان",
+    "lastUpdated": "آخر تحديث: {date}",
+    "editorPlaceholder": "ابدأ بكتابة ملاحظتك هنا. استخدم # للعناوين...",
+    "selectNote": "اختر ملاحظة أو أنشئ واحدة جديدة."
+  }
+}
