@@ -51,6 +51,14 @@ export interface PomodoroSession {
   duration: number; // in minutes
 }
 
+export type ToastType = 'success' | 'error' | 'info';
+
+export interface ToastMessage {
+  id: number;
+  message: string;
+  type: ToastType;
+}
+
 export interface AppContextType {
   tasks: Task[];
   setTasks: React.Dispatch<React.SetStateAction<Task[]>>;

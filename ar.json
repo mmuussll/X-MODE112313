@@ -1,3 +1,4 @@
+
 {
   "zenith": "زينث",
   "pomodoro": "بومودورو",
@@ -46,9 +47,10 @@
     "currentStreak": "سلسلة حالية",
     "thisMonth": "هذا الشهر",
     "totalCompletions": "إجمالي الإكمالات",
-    "doneToday": "هل أنجزت اليوم؟",
     "monthlyProgress": "التقدم الشهري",
-    "selectHabit": "اختر عادة أو أضف واحدة جديدة لرؤية التفاصيل."
+    "selectHabit": "اختر عادة أو أضف واحدة جديدة لرؤية التفاصيل.",
+    "calendarTitle": "التقويم الشهري",
+    "weekdays": "إث,ثل,أر,خم,جم,سب,أح"
   },
   "notes": {
     "title": "الملاحظات",
@@ -56,7 +58,17 @@
     "newNote": "ملاحظة جديدة",
     "untitledNote": "ملاحظة بدون عنوان",
     "lastUpdated": "آخر تحديث: {date}",
-    "editorPlaceholder": "ابدأ بكتابة ملاحظتك هنا. استخدم # للعناوين...",
-    "selectNote": "اختر ملاحظة أو أنشئ واحدة جديدة."
+    "editorPlaceholder": "ابدأ الكتابة... # لعنوان، **عريض**، *مائل*",
+    "selectNote": "اختر ملاحظة أو أنشئ واحدة جديدة.",
+    "editor": "Markdown",
+    "preview": "معاينة"
+  },
+  "toast": {
+    "taskSaved": "تم حفظ المهمة بنجاح!",
+    "taskDeleted": "تم حذف المهمة.",
+    "habitAdded": "تمت إضافة عادة جديدة!",
+    "habitDeleted": "تمت إزالة العادة.",
+    "noteCreated": "تم إنشاء ملاحظة جديدة.",
+    "noteDeleted": "تم حذف الملاحظة."
   }
 }

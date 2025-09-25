@@ -4,6 +4,7 @@ import { AppContext } from '../contexts/AppContext';
 import { Task, TaskPriority, TaskStatus } from '../types';
 import { PlusIcon, EditIcon, TrashIcon } from './icons/Icons';
 import { useTranslation } from '../contexts/I18n';
+import { useToast } from '../contexts/ToastContext';
 
 const TaskModal: React.FC<{
     task: Task | null;
@@ -79,20 +80,24 @@ const TodoList: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [editingTask, setEditingTask] = useState<Task | null>(null);
     const { t } = useTranslation();
+    const { addToast } = useToast();
 
     const getPriorityText = (p: TaskPriority) => t(`todo.priorities.${p}`);
     const getStatusText = (s: TaskStatus) => t(`todo.statuses.${s.replace(' ', '')}`);
 
     const handleSaveTask = (task: Task) => {
-        if (tasks.find(t => t.id === task.id)) {
-            setTasks(tasks.map(t => t.id === task.id ? task : t));
-        } else {
+        const isNew = !tasks.find(t => t.id === task.id);
+        if (isNew) {
             setTasks([...tasks, task]);
+        } else {
+            setTasks(tasks.map(t => t.id === task.id ? task : t));
         }
+        addToast(t('toast.taskSaved'), 'success');
     };
     
     const handleDeleteTask = (id: string) => {
         setTasks(tasks.filter(t => t.id !== id));
+        addToast(t('toast.taskDeleted'), 'info');
     };
     
     const openEditModal = (task: Task) => {
@@ -136,7 +141,7 @@ const TodoList: React.FC = () => {
         <div className="text-text-primary h-full flex flex-col">
             <header className="flex justify-between items-center mb-6">
                 <h1 className="text-3xl font-bold">{t('todo.title')}</h1>
-                <button onClick={openNewModal} className="flex items-center bg-accent hover:bg-accent-hover text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                <button onClick={openNewModal} className="flex items-center bg-accent hover:bg-accent-hover text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 transform hover:scale-105">
                     <PlusIcon />
                     <span className="ms-2">{t('todo.newTask')}</span>
                 </button>
@@ -148,15 +153,15 @@ const TodoList: React.FC = () => {
                         <h2 className="font-bold text-lg mb-4 text-center">{getStatusText(status)} ({columns[status].length})</h2>
                         <div className="flex-1 overflow-y-auto pe-2 space-y-4">
                             {columns[status].map(task => (
-                                <div key={task.id} className={`bg-primary p-4 rounded-lg shadow-md border-s-4 ${priorityBorderColor(task.priority)}`}>
+                                <div key={task.id} className={`bg-primary p-4 rounded-lg shadow-md border-s-4 ${priorityBorderColor(task.priority)} transition-all duration-200 hover:shadow-xl hover:transform hover:-translate-y-1`}>
                                     <div className="flex justify-between items-start">
                                         <h3 className="font-bold text-md mb-2">{task.title}</h3>
                                         <span className={`px-2 py-1 text-xs font-semibold rounded-full text-white ${priorityColor(task.priority)}`}>{getPriorityText(task.priority)}</span>
                                     </div>
                                     <p className="text-sm text-text-secondary mb-3">{task.description}</p>
                                     <div className="flex justify-end space-x-2">
-                                        <button onClick={() => openEditModal(task)} className="p-2 text-text-secondary hover:text-accent"><EditIcon /></button>
-                                        <button onClick={() => handleDeleteTask(task.id)} className="p-2 text-text-secondary hover:text-red-500"><TrashIcon /></button>
+                                        <button onClick={() => openEditModal(task)} className="p-2 text-text-secondary hover:text-accent transition-colors"><EditIcon /></button>
+                                        <button onClick={() => handleDeleteTask(task.id)} className="p-2 text-text-secondary hover:text-red-500 transition-colors"><TrashIcon /></button>
                                     </div>
                                 </div>
                             ))}

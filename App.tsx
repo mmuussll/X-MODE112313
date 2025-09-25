@@ -9,6 +9,8 @@ import TodoList from './components/TodoList';
 import HabitTracker from './components/HabitTracker';
 import Notebook from './components/Notebook';
 import { I18nProvider } from './contexts/I18n';
+import { ToastProvider } from './contexts/ToastContext';
+import ToastContainer from './components/ToastContainer';
 
 const App: React.FC = () => {
   const [activeView, setActiveView] = useState<View>(View.POMODORO);
@@ -45,14 +47,17 @@ const App: React.FC = () => {
 
   return (
     <I18nProvider>
-      <AppContext.Provider value={appContextValue}>
-        <div className="flex h-screen bg-primary font-sans">
-          <Sidebar activeView={activeView} setActiveView={setActiveView} />
-          <main className="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto">
-            {renderView()}
-          </main>
-        </div>
-      </AppContext.Provider>
+      <ToastProvider>
+        <AppContext.Provider value={appContextValue}>
+          <div className="flex h-screen bg-primary font-sans">
+            <Sidebar activeView={activeView} setActiveView={setActiveView} />
+            <main className="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto">
+              {renderView()}
+            </main>
+          </div>
+          <ToastContainer />
+        </AppContext.Provider>
+      </ToastProvider>
     </I18nProvider>
   );
 };

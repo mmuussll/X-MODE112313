@@ -1,3 +1,4 @@
+
 {
   "zenith": "Zenith",
   "pomodoro": "Pomodoro",
@@ -46,9 +47,10 @@
     "currentStreak": "Current Streak",
     "thisMonth": "This Month",
     "totalCompletions": "Total Completions",
-    "doneToday": "Done Today?",
     "monthlyProgress": "Monthly Progress",
-    "selectHabit": "Select a habit or add a new one to see details."
+    "selectHabit": "Select a habit or add a new one to see details.",
+    "calendarTitle": "Monthly Calendar",
+    "weekdays": "Mon,Tue,Wed,Thu,Fri,Sat,Sun"
   },
   "notes": {
     "title": "Notes",
@@ -56,7 +58,17 @@
     "newNote": "New Note",
     "untitledNote": "Untitled Note",
     "lastUpdated": "Last updated: {date}",
-    "editorPlaceholder": "Start writing your note here. Use # for title...",
-    "selectNote": "Select a note or create a new one."
+    "editorPlaceholder": "Start writing... # for H1, **bold**, *italic*",
+    "selectNote": "Select a note or create a new one.",
+    "editor": "Markdown",
+    "preview": "Preview"
+  },
+  "toast": {
+    "taskSaved": "Task saved successfully!",
+    "taskDeleted": "Task has been deleted.",
+    "habitAdded": "New habit added!",
+    "habitDeleted": "Habit has been removed.",
+    "noteCreated": "New note created.",
+    "noteDeleted": "Note has been deleted."
   }
 }
