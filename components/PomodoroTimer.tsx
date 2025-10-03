@@ -104,8 +104,8 @@ const PomodoroTimer: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full text-text-primary">
-      <div className="w-full max-w-md bg-secondary p-8 rounded-2xl shadow-lg text-center">
+    <div className="flex flex-col items-center text-text-primary">
+      <div className="w-full max-w-md bg-secondary p-8 rounded-2xl shadow-lg text-center mt-8">
         <div className="flex justify-center space-x-2 mb-6">
           <button onClick={() => switchMode('work')} className={`px-4 py-2 rounded-lg transition-colors ${mode === 'work' ? 'bg-accent' : 'bg-primary hover:bg-opacity-75'}`}>{t('pomodoroTimer.work')}</button>
           <button onClick={() => switchMode('shortBreak')} className={`px-4 py-2 rounded-lg transition-colors ${mode === 'shortBreak' ? 'bg-accent' : 'bg-primary hover:bg-opacity-75'}`}>{t('pomodoroTimer.shortBreak')}</button>
@@ -154,6 +154,16 @@ const PomodoroTimer: React.FC = () => {
                 <Bar dataKey="sessions" name={t('pomodoroTimer.sessions')} fill="#6366f1" />
             </BarChart>
         </ResponsiveContainer>
+      </div>
+
+      <div className="w-full max-w-4xl bg-secondary p-6 rounded-2xl shadow-lg mt-8 mb-8">
+        <h2 className="text-xl font-bold mb-4">{t('pomodoroTimer.pomodoroInfo.title')}</h2>
+        <div className="text-text-secondary space-y-4 leading-relaxed">
+          <p>{t('pomodoroTimer.pomodoroInfo.p1')}</p>
+          <p>{t('pomodoroTimer.pomodoroInfo.p2')}</p>
+          <p>{t('pomodoroTimer.pomodoroInfo.p3')}</p>
+          <p>{t('pomodoroTimer.pomodoroInfo.p4')}</p>
+        </div>
       </div>
     </div>
   );

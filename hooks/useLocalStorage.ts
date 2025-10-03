@@ -1,7 +1,8 @@
+// Fix: Import Dispatch and SetStateAction to use as types.
+import { useState, useEffect, Dispatch, SetStateAction } from 'react';
 
-import { useState, useEffect } from 'react';
-
-function useLocalStorage<T,>(key: string, initialValue: T): [T, React.Dispatch<React.SetStateAction<T>>] {
+// Fix: Use imported Dispatch and SetStateAction types in the return type definition.
+function useLocalStorage<T,>(key: string, initialValue: T): [T, Dispatch<SetStateAction<T>>] {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue;

@@ -1,3 +1,5 @@
+// Fix: Import Dispatch and SetStateAction from react to be used as types.
+import type { Dispatch, SetStateAction } from 'react';
 
 export enum View {
   POMODORO = 'POMODORO',
@@ -61,11 +63,15 @@ export interface ToastMessage {
 
 export interface AppContextType {
   tasks: Task[];
-  setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+  // Fix: Use imported Dispatch and SetStateAction types.
+  setTasks: Dispatch<SetStateAction<Task[]>>;
   habits: Habit[];
-  setHabits: React.Dispatch<React.SetStateAction<Habit[]>>;
+  // Fix: Use imported Dispatch and SetStateAction types.
+  setHabits: Dispatch<SetStateAction<Habit[]>>;
   notes: Note[];
-  setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
+  // Fix: Use imported Dispatch and SetStateAction types.
+  setNotes: Dispatch<SetStateAction<Note[]>>;
   sessions: PomodoroSession[];
-  setSessions: React.Dispatch<React.SetStateAction<PomodoroSession[]>>;
+  // Fix: Use imported Dispatch and SetStateAction types.
+  setSessions: Dispatch<SetStateAction<PomodoroSession[]>>;
 }
